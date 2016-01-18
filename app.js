@@ -1,32 +1,27 @@
-/**
-@toc
-1. setup - whitelist, appPath, html5Mode
-*/
-
 'use strict';
 
-angular.module('myApp', [
-'ngRoute', 'ngSanitize', 'ngTouch',		//additional angular modules
-'kutomer.ng-lovefield'
-]).
-config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
-	/**
-	setup - whitelist, appPath, html5Mode
-	@toc 1.
-	*/
-	$locationProvider.html5Mode(false);		//can't use this with github pages / if don't have access to the server
-	
-	// var staticPath ='/';
-	var staticPath;
-	// staticPath ='/angular-services/ng-lovefield/';		//local
-	staticPath ='/';		//nodejs (local)
-	// staticPath ='/ng-lovefield/';		//gh-pages
-	var appPathRoute ='/';
-	var pagesPath =staticPath+'pages/';
-	
-	
-	$routeProvider.when(appPathRoute+'home', {templateUrl: pagesPath+'home/home.html'});
+angular.module('ng-lovefield-demo', ['ngRoute', 'kutomer.ng-lovefield']).
+		config(['$routeProvider', '$locationProvider',
+			function($routeProvider, $locationProvider) {
 
-	$routeProvider.otherwise({redirectTo: appPathRoute+'home'});
-	
-}]);
+				//can't use this with github demo / if don't have access to the server
+				$locationProvider.html5Mode(false);
+
+				var staticPath = '/';
+				var appPathRoute = '/';
+				var pagesPath = staticPath + 'demo/';
+
+				$routeProvider.when(appPathRoute + 'main', {templateUrl: pagesPath + 'main/main.html'});
+				$routeProvider.otherwise({redirectTo: appPathRoute + 'main'});
+			}]
+		)
+		.config(['lovefieldProvider',
+			function(lovefieldProvider) {
+				var schemaBuilder = lovefieldProvider.create('test', 1);
+
+				schemaBuilder.createTable('first').
+				addColumn('str_col', lf.Type.STRING).
+				addColumn('num_col', lf.Type.NUMBER).
+				addPrimaryKey(['str_col']);
+			}]
+		);

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en">
 <head>
     <meta charset="utf-8">
 
     <title>ng-lovefield</title>
 
 </head>
-<body>
+<body ng-app="ng-lovefield-demo">
 	<div ng-view></div>
 
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>
-	
-	<script type="text/javascript" src="ng-lovefield.js"></script>
-	<!--<script type="text/javascript" src="field.min.js"></script>-->
+	<script type="text/javascript" src="bower_components/lovefield/dist/lovefield.js"></script>
+
+	<script type="text/javascript" src="dest/ng-lovefield.min.js"></script>
 	
 	<script type="text/javascript" src="app.js"></script>
 	
-	<script type="text/javascript" src="pages/home/HomeCtrl.js"></script>
+	<script type="text/javascript" src="demo/main/main.js"></script>
 </body>
 </html>

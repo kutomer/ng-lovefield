@@ -1,20 +1,57 @@
-/**
- @fileOverview
-
- @toc
-
- */
-
 'use strict';
 
-angular.module('kutomer.ng-lovefield', [])
-    .factory('Field', [ function () {
+declare var angular:any;
+declare var lf:any;
 
-        //public methods & properties
-        var self ={
+angular.module('kutomer.ng-lovefield', [])
+    .provider('lovefield', function LovefieldProvider() {
+        var schemaBuilder;
+
+        this.create = function(name, version) {
+            if (angular.isUndefined(lf)) {
+                throw new Error("lovefield is not defined!");
+            }
+
+            return schemaBuilder = lf.schema.create(name, version);
         };
 
-        //private methods and properties - should ONLY expose methods and properties publicly (via the 'return' object) that are supposed to be used; everything else (helper methods that aren't supposed to be called externally) should be private.
+        this.$get = ['$q', function ($q) {
+            return LovefieldFactory(schemaBuilder, $q);
+        }];
+    });
 
-        return self;
-    }]);
+// TODO: separate to different files
+function LovefieldFactory(schemaBuilder, $q) {
+    var db;
+    var dbPromise;
+
+    function getDB() {
+        if (angular.isDefined(db)) {
+            return $q.resolve(db);
+        }
+
+        if (!dbPromise) {
+            // TODO: handle connection parameters
+            // TODO: handle exception
+            dbPromise = schemaBuilder.connect()
+                .then(function (connection) {
+                    db = connection;
+                    return db;
+                });
+        }
+
+        return dbPromise;
+    }
+
+    function clear() {
+        if (angular.isDefined(db)) {
+            let tables = db.getSchema().tables();
+            tables.forEach((table) => db.delete().from(table).exec());
+        }
+    }
+
+    return {
+        getDB: getDB,
+        clear: clear
+    };
+}

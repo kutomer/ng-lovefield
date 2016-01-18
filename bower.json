@@ -1,11 +1,11 @@
 {
   "name": "ng-lovefield",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "This is an angular wrapper for the lovefield project",
   "authors": [
-    "Kruvi Tomer <kruvitomer1991gmail.com>"
+    "Kruvi Tomer <kruvitomer1991@gmail.com>"
   ],
-  "description": "Demo",
-  "keywords": [],
+  "keywords": ["lovefield", "ng-lovefield", "angular-lovefield", "indexeddb", "angular-indexeddb"],
   "license": "MIT",
   "ignore": [
     "**/.*",

@@ -1,7 +1,7 @@
 # ng-lovefield
 This is an angular wrapper for the [lovefield](https://github.com/google/lovefield "lovefield repo") project by GOOGLE.
 
-## How to use
+## How to use - [demo site](http://kutomer.github.io/ng-lovefield/)
 ### define schema and create DB
 ```
 		.config(['lovefieldProvider',
@@ -34,8 +34,14 @@ This is an angular wrapper for the [lovefield](https://github.com/google/lovefie
 ```
 **Do not forget to inject the lovefield factory to your ctrl \ service**
 
+## How to contribute?
+1. clone the repo
+2. `npm install -g grunt bower`
+3. `bower install`
+4. `grunt` the default task will compile the module to the "dest" dir
+5. `npm start` starts the local server for the demo site
+
 ## TODO List:
-* wrap lf.Type
 * wrap tables
 * validate tableSchema (must have a pk for instance) 
 * connect to more then one database

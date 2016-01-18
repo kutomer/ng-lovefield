@@ -20,8 +20,8 @@ angular.module('ng-lovefield-demo', ['ngRoute', 'kutomer.ng-lovefield']).
 				var schemaBuilder = lovefieldProvider.create('test', 1);
 
 				schemaBuilder.createTable('first').
-				addColumn('str_col', lf.Type.STRING).
-				addColumn('num_col', lf.Type.NUMBER).
+				addColumn('str_col', lovefieldProvider.Type.STRING).
+				addColumn('num_col', lovefieldProvider.Type.NUMBER).
 				addPrimaryKey(['str_col']);
 			}]
 		);

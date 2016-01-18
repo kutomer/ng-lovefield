@@ -15,6 +15,8 @@ angular.module('kutomer.ng-lovefield', [])
             return schemaBuilder = lf.schema.create(name, version);
         };
 
+        this.Type = lf.Type;
+
         this.$get = ['$q', function ($q) {
             return LovefieldFactory(schemaBuilder, $q);
         }];
@@ -32,12 +34,9 @@ function LovefieldFactory(schemaBuilder, $q) {
 
         if (!dbPromise) {
             // TODO: handle connection parameters
-            // TODO: handle exception
             dbPromise = schemaBuilder.connect()
-                .then(function (connection) {
-                    db = connection;
-                    return db;
-                });
+                .then((connection) => {return db = connection})
+                .catch((err) => { console.error("cannot connect to lovefield DB!")})
         }
 
         return dbPromise;

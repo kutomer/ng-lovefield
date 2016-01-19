@@ -1,6 +1,10 @@
 # ng-lovefield
 This is an angular wrapper for the [lovefield](https://github.com/google/lovefield "lovefield repo") project by GOOGLE.
 
+### How to install?
+`bower install ng-lovefield`
+**use --save to persist with bower.json**
+
 ## How to use - [demo site](http://kutomer.github.io/ng-lovefield/)
 ### define schema and create DB
 ```
@@ -51,4 +55,3 @@ lovefield.clearDB()
 * wrap tables
 * validate tableSchema (must have a pk for instance) 
 * connect to more then one database
-* publish package as a bower package

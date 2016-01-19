@@ -19,6 +19,7 @@ angular
                         console.log(response);
                 });
             });
+        };
 
-        }
+        vm.clear = lovefield.clearDB;
     }]);

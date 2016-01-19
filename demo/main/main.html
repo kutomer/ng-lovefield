@@ -1,4 +1,20 @@
 <div ng-controller='DemoCtrl as demo'>
-    <input type="text" ng-model="demo.title">
-    <button ng-click="demo.insert()">add</button>
+    <h1>NG-Lovefield demo</h1>
+
+    <section class="demo-section">
+        <header>
+            <h4>Insert rows</h4>
+        </header>
+
+        <input type="text" ng-model="demo.title">
+        <button ng-click="demo.insert()">Insert!</button>
+    </section>
+
+    <section class="demo-section">
+        <header>
+            <h4>Clear all tables</h4>
+        </header>
+
+        <button class="danger" ng-click="demo.clear()">Clear</button>
+    </section>
 </div>

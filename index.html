@@ -5,6 +5,31 @@
 
     <title>ng-lovefield</title>
 
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+
+		h1, h4 {
+			text-decoration: underline;
+		}
+
+		.demo-section {
+			margin: 1rem;
+			padding: 0.5rem;
+			border: 1px solid lightgray;
+		}
+
+		.danger {
+			background-color: red;
+			color: white;
+			border: 0;
+			font-weight: bold;
+			border-radius: 10px;
+			padding: 0.5rem;
+		}
+
+	</style>
 </head>
 <body ng-app="ng-lovefield-demo">
 	<div ng-view></div>
@@ -14,7 +39,7 @@
 	<script type="text/javascript" src="bower_components/lovefield/dist/lovefield.js"></script>
 
 	<script type="text/javascript" src="dest/ng-lovefield.min.js"></script>
-	
+
 	<script type="text/javascript" src="app.js"></script>
 	
 	<script type="text/javascript" src="demo/main/main.js"></script>

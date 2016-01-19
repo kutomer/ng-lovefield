@@ -5,6 +5,9 @@
   "authors": [
     "Kruvi Tomer <kruvitomer1991@gmail.com>"
   ],
+  "main": [
+    "dest/ng-lovefield.min.js"
+  ],
   "keywords": ["lovefield", "ng-lovefield", "angular-lovefield", "indexeddb", "angular-indexeddb"],
   "license": "MIT",
   "ignore": [
@@ -14,6 +17,10 @@
     "test",
     "tests"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kutomer/ng-lovefield"
+  },
   "dependencies": {
     "angular": "~1.4.0",
     "lovefield": "~2.1.5"

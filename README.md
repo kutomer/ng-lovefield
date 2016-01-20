@@ -1,4 +1,6 @@
 # ng-lovefield
+<a href="https://badge.fury.io/bo/ng-lovefield"><img src="https://badge.fury.io/bo/ng-lovefield.svg" alt="Bower version" height="18"></a>
+
 This is an angular wrapper for the [lovefield](https://github.com/google/lovefield "lovefield repo") project by GOOGLE.
 
 ### How to install?

@@ -1,6 +1,6 @@
 {
   "name": "ng-lovefield",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is an angular wrapper for the lovefield project",
   "authors": [
     "Kruvi Tomer <kruvitomer1991@gmail.com>"
@@ -8,7 +8,13 @@
   "main": [
     "dest/ng-lovefield.min.js"
   ],
-  "keywords": ["lovefield", "ng-lovefield", "angular-lovefield", "indexeddb", "angular-indexeddb"],
+  "keywords": [
+    "lovefield",
+    "ng-lovefield",
+    "angular-lovefield",
+    "indexeddb",
+    "angular-indexeddb"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",

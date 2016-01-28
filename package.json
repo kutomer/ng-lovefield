@@ -1,7 +1,7 @@
 {
   "author": "Kruvi Tomer <kruvitomer1991@gmail.com>",
   "name": "ng-lovefield",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is an angular wrapper for the lovefield project",
   "homepage": "",
   "dependencies": {
@@ -14,7 +14,13 @@
     "grunt-contrib-uglify": "~0.2.5",
     "grunt-contrib-jshint": "~0.7.0"
   },
-  "keywords": ["lovefield", "ng-lovefield", "angular-lovefield", "indexeddb", "angular-indexeddb"],
+  "keywords": [
+    "lovefield",
+    "ng-lovefield",
+    "angular-lovefield",
+    "indexeddb",
+    "angular-indexeddb"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

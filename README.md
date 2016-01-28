@@ -5,7 +5,10 @@ This is an angular wrapper for the [lovefield](https://github.com/google/lovefie
 
 ### How to install?
 `bower install ng-lovefield`
-**use --save to persist with bower.json**
+
+`npm install ng-lovefield`
+
+**use --save to persist with bower.json \ package.json**
 
 ## How to use - [demo site](http://kutomer.github.io/ng-lovefield/)
 ### define schema and create DB

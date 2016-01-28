@@ -1,23 +1,24 @@
 {
-	"author": "Kruvi Tomer <kruvitomer1991@gmail.com>",
-	"name": "ng-lovefield",
-	"version": "0.0.1",
-	"description": "This is an angular wrapper for the lovefield project",
-	"homepage": "",
-	"dependencies": {
-	},
-	"devDependencies": {
-		"express":"~3.4.4",
-		"grunt": "~0.4.1",
-		"grunt-contrib-concat": "~0.3.0",
-		"grunt-contrib-uglify": "~0.2.5",
-		"grunt-contrib-jshint": "~0.7.0"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": "https://github.com/kutomer/ng-lovefield",
-	"engines":{
-		"node":"0.10.10"
-	}
+  "author": "Kruvi Tomer <kruvitomer1991@gmail.com>",
+  "name": "ng-lovefield",
+  "version": "0.0.1",
+  "description": "This is an angular wrapper for the lovefield project",
+  "homepage": "",
+  "dependencies": {
+    "lovefield": "^2.1.5"
+  },
+  "devDependencies": {
+    "express": "~3.4.4",
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.5",
+    "grunt-contrib-jshint": "~0.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/kutomer/ng-lovefield",
+  "engines": {
+    "node": "0.10.10"
+  }
 }

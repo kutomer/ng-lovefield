@@ -1,7 +1,7 @@
 {
   "author": "Kruvi Tomer <kruvitomer1991@gmail.com>",
   "name": "ng-lovefield",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is an angular wrapper for the lovefield project",
   "homepage": "",
   "dependencies": {
@@ -30,8 +30,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/kutomer/ng-lovefield",
-  "engines": {
-    "node": "0.10.10"
-  }
+  "repository": "https://github.com/kutomer/ng-lovefield"
 }
